@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Email
 %define	pnam	Store
-Summary:	Email::Store - Framework for database-backed email storage
-#Summary(pl):	
+Summary:	Email::Store - framework for database-backed email storage
+Summary(pl):	Email::Store - szkielet przechowywania poczty w bazie danych
 Name:		perl-Email-Store
 Version:	0.15
 Release:	1
@@ -37,29 +37,30 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-C<Email::Store> is the ideal basis for any application which needs to
-deal with databases of email: archiving, searching, or even storing mail
-for implementing IMAP or POP3 servers.
+Email::Store is the ideal basis for any application which needs to
+deal with databases of email: archiving, searching, or even storing
+mail for implementing IMAP or POP3 servers.
 
-C<Email::Store> itself is a very lightweight framework, meaning it does
+Email::Store itself is a very lightweight framework, meaning it does
 not provide very much functionality itself; in effect, it is merely a
-L<Class::DBI> interface to a database schema which is designed for
-storing email. Incidentally, if you don't know much about C<Class::DBI>,
+Class::DBI interface to a database schema which is designed for
+storing email. Incidentally, if you don't know much about Class::DBI,
 you're going to need to in order to get much out of this.
 
-Despite its minimalist nature, C<Email::Store> is incredibly powerful.
-Its power comes from its extensibility, through plugin modules and hooks
-which allow you to add new database tables and concepts to the system,
-and so access the mail store from a "different direction". In a sense,
-C<Email::Store> is a blank canvas, onto which you can pick and choose
-(or even write!) the plugins which you want for your application.
+Despite its minimalist nature, Email::Store is incredibly powerful.
+Its power comes from its extensibility, through plugin modules and
+hooks which allow you to add new database tables and concepts to the
+system, and so access the mail store from a "different direction". In
+a sense, Email::Store is a blank canvas, onto which you can pick and
+choose (or even write!) the plugins which you want for your
+application.
 
-For instance, the core C<Email::Store::Entity> plugin module addresses
+For instance, the core Email::Store::Entity plugin module addresses
 the idea of "people" in the email universe, allowing you to search for
 mails to or from particular people; (despite their changing names or
-email addresses) C<Email::Store::Thread> interfaces C<Email::Store> to
-C<Mail::Thread> allowing you to navigate mails by their position in a
-mail thread; the planned non-core C<Email::Store::Plucene> module plugs
+email addresses) Email::Store::Thread interfaces Email::Store to
+Mail::Thread allowing you to navigate mails by their position in a
+mail thread; the planned non-core Email::Store::Plucene module plugs
 into the indexing process and stores information about emails in a
 Plucene search index for quick retrieval later, and so on.
 
