@@ -64,8 +64,36 @@ mail thread; the planned non-core Email::Store::Plucene module plugs
 into the indexing process and stores information about emails in a
 Plucene search index for quick retrieval later, and so on.
 
-# %description -l pl
-# TODO
+%description -l pl
+Email::Store to idealna podstawa dla ka¿dej aplikacji potrzebuj±cej
+wspó³pracowaæ z bazami danych listów: archiwizowaniem,
+przeszukiwaniem czy nawet przechowywaniem poczty przy implementowaniu
+serwerów IMAP lub POP3.
+
+Sam Email::Store jest bardzo lekkim szkieletem, co znaczy, ¿e sam w
+sobie nie dostarcza zbyt du¿ej funkcjonalno¶ci. W efekcie jest jedynie
+interfejsem Class::DBI do schematu bazy danych zaprojektowanego do
+przechowywania poczty. Przypadkowo, je¶li programista nie wie zbyt
+du¿o o Class::DBI, musi siê trochê dowiedzieæ, aby skorzystaæ z
+Email::Store.
+
+Pomimo swojej minimalistycznej natury Email::Store jest zadziwiaj±co
+potê¿ny. Jego potêga wynika z rozszerzalno¶ci poprzez modu³y wtyczek i
+punkty zaczepienia pozwalaj±ce na dodawanie nowych tabel i idei baz
+danych do systemu oraz dostêp do zasobów pocztowych z "innej strony".
+W tym sensie Email::Store to czyste p³ótno, na którym mo¿na umieszczaæ
+wybrane (a nawet napisane przez siebie) wtyczki, które chcemy u¿yæ we
+w³asnej aplikacji.
+
+Na przyk³ad, podstawowy modu³ wtyczki Email::Store::Entity przedstawia
+ideê "ludzi" w ¶wiecie poczty elektronicznej, pozwalaj±c wyszukiwaæ
+listy do lub od okre¶lonych osób (pomimo zmieniania przez nich imion
+czy adresów pocztowych). Email::Store::Thread ³±czy Email::Store z
+Email::Thread pozwalaj±c na nawigowanie poprzez listy po ich pozycji w
+w±tku; planowany dodatkowy modu³ Email::Store::Plucene pod³±cza siê do
+procesu indeksowania i przechowuje informacje o listach w indeksie
+wyszukiwarki Plucene w celu szybszego wyszukiwania ich pó¼niej... i
+tak dalej.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
