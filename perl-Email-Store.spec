@@ -8,13 +8,13 @@
 Summary:	Email::Store - framework for database-backed email storage
 Summary(pl):	Email::Store - szkielet przechowywania poczty w bazie danych
 Name:		perl-Email-Store
-Version:	0.15
+Version:	0.24
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ca074d3527c07d845f03a44a243a5e8c
+# Source0-md5:	eeca6f779ee5a9276ff2e074fe1a7990
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -22,13 +22,15 @@ BuildRequires:	perl-Cache
 BuildRequires:	perl-Class-DBI >= 0.9
 BuildRequires:	perl-Class-DBI-DATA-Schema
 BuildRequires:	perl-DBD-SQLite
-BuildRequires:	perl-Email-Address
-BuildRequires:	perl-Email-MIME
+BuildRequires:	perl-Email-Address >= 1.80
+BuildRequires:	perl-Email-MessageID
+BuildRequires:	perl-Email-MIME >= 1.8
 BuildRequires:	perl-Email-MIME-Attachment-Stripper >= 1.1
-BuildRequires:	perl-Email-Simple >= 1
+BuildRequires:	perl-Email-Simple >= 1.92
 BuildRequires:	perl-File-Slurp
-BuildRequires:	perl-Mail-ListDetector >= 0.3
-BuildRequires:	perl-Module-Pluggable >= 1.4
+BuildRequires:	perl-Mail-ListDetector >= 0.31
+BuildRequires:	perl-MIME-tools
+BuildRequires:	perl-Module-Pluggable >= 2.6
 BuildRequires:	perl-Module-Pluggable-Ordered >= 1
 BuildRequires:	perl-SQL-Translator
 BuildRequires:	perl-Time-Piece
