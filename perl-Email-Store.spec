@@ -6,7 +6,7 @@
 %define	pdir	Email
 %define	pnam	Store
 Summary:	Email::Store - framework for database-backed email storage
-Summary(pl.UTF-8):   Email::Store - szkielet przechowywania poczty w bazie danych
+Summary(pl.UTF-8):	Email::Store - szkielet przechowywania poczty w bazie danych
 Name:		perl-Email-Store
 Version:	0.24
 Release:	1
