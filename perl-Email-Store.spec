@@ -8,13 +8,13 @@
 Summary:	Email::Store - framework for database-backed email storage
 Summary(pl.UTF-8):	Email::Store - szkielet przechowywania poczty w bazie danych
 Name:		perl-Email-Store
-Version:	0.24
+Version:	0.255
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	eeca6f779ee5a9276ff2e074fe1a7990
+# Source0-md5:	54f91841d5e67f86e9f4fc724ac0d1be
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
