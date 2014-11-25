@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define	pdir	Email
 %define	pnam	Store
+%include	/usr/lib/rpm/macros.perl
 Summary:	Email::Store - framework for database-backed email storage
 Summary(pl.UTF-8):	Email::Store - szkielet przechowywania poczty w bazie danych
 Name:		perl-Email-Store
@@ -15,6 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	cd722ff8b222dbb697556aa58f12c965
+URL:		http://search.cpan.org/dist/Email-Store/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -23,13 +24,13 @@ BuildRequires:	perl-Class-DBI >= 0.9
 BuildRequires:	perl-Class-DBI-DATA-Schema
 BuildRequires:	perl-DBD-SQLite
 BuildRequires:	perl-Email-Address >= 1.80
-BuildRequires:	perl-Email-MessageID
 BuildRequires:	perl-Email-MIME >= 1.8
 BuildRequires:	perl-Email-MIME-Attachment-Stripper >= 1.1
+BuildRequires:	perl-Email-MessageID
 BuildRequires:	perl-Email-Simple >= 1.92
 BuildRequires:	perl-File-Slurp
-BuildRequires:	perl-Mail-ListDetector >= 0.31
 BuildRequires:	perl-MIME-tools
+BuildRequires:	perl-Mail-ListDetector >= 0.31
 BuildRequires:	perl-Module-Pluggable >= 2.6
 BuildRequires:	perl-Module-Pluggable-Ordered >= 1
 BuildRequires:	perl-SQL-Translator
@@ -68,9 +69,9 @@ Plucene search index for quick retrieval later, and so on.
 
 %description -l pl.UTF-8
 Email::Store to idealna podstawa dla każdej aplikacji potrzebującej
-współpracować z bazami danych listów: archiwizowaniem,
-przeszukiwaniem czy nawet przechowywaniem poczty przy implementowaniu
-serwerów IMAP lub POP3.
+współpracować z bazami danych listów: archiwizowaniem, przeszukiwaniem
+czy nawet przechowywaniem poczty przy implementowaniu serwerów IMAP
+lub POP3.
 
 Sam Email::Store jest bardzo lekkim szkieletem, co znaczy, że sam w
 sobie nie dostarcza zbyt dużej funkcjonalności. W efekcie jest jedynie
